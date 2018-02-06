@@ -15,6 +15,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $timeout, $uibModal) {
       step: 1,
       showSelectionBar: false,
       showAdvice: 10,
+      powerOutput:0.2565,
       optionBtnPlus: function () {
         console.log('!!! amcust: options > optionBtnPlus() [' + $scope.amcustDebugSlider.value + ' -> ' + ($scope.amcustDebugSlider.value + 1) + ']');
         if ($scope.amcustDebugSlider.value < $scope.amcustDebugSlider.options.ceil) {

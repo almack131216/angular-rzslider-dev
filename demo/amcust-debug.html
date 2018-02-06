@@ -22,11 +22,15 @@
     <button ng-click="parentBtnMinus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.floor">parent -</button>
     <button ng-click="parentBtnPlus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.ceil">parent +</button>
     <div class="amcust-slider">
-    <rzslider
-      rz-slider-model="amcustDebugSlider.value"
-      rz-slider-options="amcustDebugSlider.options"
-      rz-slider-tpl-url="amcustTemplate.html"
-    ></rzslider>
+      <div class="heading-output">
+        <span class="panels-count"><span ng-bind="amcustDebugSlider.value"></span>panelen</span>
+        <span class="panels-output">Opbrengst<span ng-bind="amcustDebugSlider.value * amcustDebugSlider.options.powerOutput"></span>kWh/jr</span>
+      </div>
+      <rzslider
+        rz-slider-model="amcustDebugSlider.value"
+        rz-slider-options="amcustDebugSlider.options"
+        rz-slider-tpl-url="amcustTemplate.html"
+      ></rzslider>
     </div>
   </article>
 

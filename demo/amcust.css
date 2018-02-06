@@ -2,6 +2,20 @@
   border:1px solid grey;
 }
 
+.heading-output {
+    display:flex;
+    width:100%;
+    background:yellow;
+}
+
+.panels-count {
+    width:100%;
+}
+
+.panels-output {
+
+}
+
 .rz-bubble.rz-limit.rz-ceil,
 .rz-bubble.rz-limit.rz-floor,
 .rz-bubble.rz-model-value,
