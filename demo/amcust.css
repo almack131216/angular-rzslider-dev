@@ -146,7 +146,7 @@
   border-color: transparent transparent #5fb624 transparent;
 }
 
-.rzslider .rz-tick .amcust-advice .lbl{
+.rzslider .rz-tick .amcust-advice .lbl {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -154,8 +154,12 @@
     background: yellow;
     text-align: center;
     color:#5fb624;
-        font-size: 16px;
+    font-size: 16px;
     line-height: 16px;
+}
+
+.rzslider .rz-tick .amcust-advice .lbl.strong {
+    font-weight:bold;
 }
 
 .amcust-clickable-labels {
