@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./lib/bootstrap.min.css">
   <link rel="stylesheet" href="../dist/rzslider.css"/>
   <link rel="stylesheet" href="demo.css"/>
-  <link rel="stylesheet" href="amcust.css"/>
+  <link rel="stylesheet" href="css/rz-slider-amcust.css"/>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 </head>
 
@@ -18,19 +18,28 @@
 <div class="wrapper">
 
   <article>
-    <h2>Debug slider: {{ amcustDebugSlider.value }} | Advice: {{ amcustDebugSlider.options.showAdvice }} | min: {{ amcustDebugSlider.options.floor }} | max: {{ amcustDebugSlider.options.ceil }} </h2>
-    <button ng-click="parentBtnMinus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.floor">parent -</button>
-    <button ng-click="parentBtnPlus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.ceil">parent +</button>
+    <h2>Debug slider</h2>
+    <div class="debug-options">
+      value: <input type="number" ng-model="amcustDebugSlider.value">
+      advice: <input type="number" ng-model="amcustDebugSlider.options.showAdvice">
+      min: <input type="number" ng-model="amcustDebugSlider.options.floor">
+      max: <input type="number" ng-model="amcustDebugSlider.options.ceil">
+      <button ng-click="parentBtnMinus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.floor">parent -</button>
+      <button ng-click="parentBtnPlus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.ceil">parent +</button>
+    </div>
+    
     <div class="amcust-slider">
       <div class="heading-output">
         <span class="panels-count"><span ng-bind="amcustDebugSlider.value"></span>panelen</span>
         <span class="panels-output">Opbrengst<span ng-bind="amcustDebugSlider.value * amcustDebugSlider.options.powerOutput"></span>kWh/jr</span>
       </div>
-      <rzslider
-        rz-slider-model="amcustDebugSlider.value"
-        rz-slider-options="amcustDebugSlider.options"
-        rz-slider-tpl-url="amcustTemplate.html"
-      ></rzslider>
+      <div class="slider-wrap">
+        <rzslider
+          rz-slider-model="amcustDebugSlider.value"
+          rz-slider-options="amcustDebugSlider.options"
+          rz-slider-tpl-url="amcustTemplate.html"
+        ></rzslider>
+      </div>
     </div>
   </article>
 
