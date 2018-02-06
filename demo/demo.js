@@ -32,18 +32,20 @@ app.controller('MainCtrl', function ($scope, $rootScope, $timeout, $uibModal) {
 
   /* + button triggered outside of directive element */
   $scope.parentBtnPlus = function () {
-    if ($scope.amcustDebugSlider.value < $scope.amcustDebugSlider.options.ceil) {
-      console.log('!!! amcust: parentBtnPlus() [' + $scope.amcustDebugSlider.value + ' -> ' + ($scope.amcustDebugSlider.value + 1) + ']');
-      $scope.amcustDebugSlider.value++;
-    }
+    $scope.amcustDebugSlider.options.optionBtnPlus();
+    // if ($scope.amcustDebugSlider.value < $scope.amcustDebugSlider.options.ceil) {
+    //   console.log('!!! amcust: parentBtnPlus() [' + $scope.amcustDebugSlider.value + ' -> ' + ($scope.amcustDebugSlider.value + 1) + ']');
+    //   $scope.amcustDebugSlider.value++;
+    // }
   }
 
   /* - button triggered outside of directive element */
   $scope.parentBtnMinus = function () {
-    console.log('!!! amcust: parentBtnMinus() [' + $scope.amcustDebugSlider.value + ' -> ' + ($scope.amcustDebugSlider.value - 1) + ']');
-    if ($scope.amcustDebugSlider.value > $scope.amcustDebugSlider.options.floor) {
-      $scope.amcustDebugSlider.value--;
-    }
+    $scope.amcustDebugSlider.options.optionBtnMinus();
+    // console.log('!!! amcust: parentBtnMinus() [' + $scope.amcustDebugSlider.value + ' -> ' + ($scope.amcustDebugSlider.value - 1) + ']');
+    // if ($scope.amcustDebugSlider.value > $scope.amcustDebugSlider.options.floor) {
+    //   $scope.amcustDebugSlider.value--;
+    // }
   }
 
   /* 
