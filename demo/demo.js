@@ -24,7 +24,7 @@ app.controller('MainCtrl', function ($scope, $rootScope, $timeout, $uibModal) {
       },
       optionBtnMinus: function () {
         console.log('!!! amcust: options > optionBtnMinus() [' + $scope.amcustDebugSlider.value + ' -> ' + ($scope.amcustDebugSlider.value - 1) + ']');
-        if ($scope.amcustDebugSlider.value > $scope.amcustDebugSlider.options.floor) {
+        if (($scope.amcustDebugSlider.value > $scope.amcustDebugSlider.options.floor) && $scope.amcustDebugSlider.options.floor > 1) {
           $scope.amcustDebugSlider.value--;
         }
       }

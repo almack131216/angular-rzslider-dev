@@ -2,23 +2,23 @@
 
 $slider-height:80px;
 $slider-pointer-height:40px;
+$slider-tick-width:30px;
 $slider-btn-height:30px;
 $slider-bar-height:9px;
-$common-font-size:$common-font-size;
+$common-font-size:20px;
 
 .debug-options {
     margin:$offset-2 0;
     input {width:50px;}
+    background:#f1f1f1;
+    padding:$offset-1;
 }
 
-.amcust-slider {
-  border:1px solid grey;
-  
+.amcust-slider {  
 
     .heading-output {
         display:flex;
         width:100%;
-        background:yellow;
         font-size:$base-font-size;
 
         .panels-count {
@@ -41,7 +41,6 @@ $common-font-size:$common-font-size;
             display: inline-block;
             width: 100%;
             height: $slider-height;
-            background:#ffc;
             margin: 0;
             vertical-align: middle;
             -webkit-user-select: none;
@@ -79,9 +78,9 @@ $common-font-size:$common-font-size;
                 @extend .btn;
                 @extend .btn-disc;
                 @extend .btn-default;
-                -webkit-box-shadow: 0px 3px 0px 0px #2f7ccc;
-                -moz-box-shadow: 0px 3px 0px 0px #2f7ccc;
-                box-shadow: 0px 3px 0px 0px #2f7ccc;
+                -webkit-box-shadow: 0px 3px 0px 0px $color-twitter-raised;
+                -moz-box-shadow: 0px 3px 0px 0px $color-twitter-raised;
+                box-shadow: 0px 3px 0px 0px $color-twitter-raised;
     
                 width: $slider-pointer-height;
                 height: $slider-pointer-height;
@@ -98,9 +97,9 @@ $common-font-size:$common-font-size;
                 &:active,
                 &:focus {
                     top: 1px;
-                    -webkit-box-shadow: 0px 2px 0px 0px #2f7ccc;
-                    -moz-box-shadow: 0px 2px 0px 0px #2f7ccc;
-                    box-shadow: 0px 2px 0px 0px #2f7ccc;
+                    -webkit-box-shadow: 0px 2px 0px 0px $color-twitter-raised;
+                    -moz-box-shadow: 0px 2px 0px 0px $color-twitter-raised;
+                    box-shadow: 0px 2px 0px 0px $color-twitter-raised;
                 }
 
                 &:after {
@@ -121,99 +120,114 @@ $common-font-size:$common-font-size;
                 display:none;
             }
 
-            .rz-tick {
-                position: absolute;
-                top: 10px;
-                left: 0;
-                z-index:2;
-                width: 1px;
-                height: 25px;
-                margin-left: 20px;
-                text-align: center;
-                cursor: pointer;
-                background: $color-gray;
-                border-radius: 0px;
+            .rz-ticks {
+                top:0;
 
-                &.hide-tick {
-                    background:transparent;
-                }
-                &:not(.show-value) .rz-tick-value {
-                    display:none;
-                }
-                &.show-value .rz-tick-value {
-                    color:$color-gray;
-                    top: auto;
-                    bottom: -50px;
-                }
-                &.tick-advice {
-                    z-index:3;
+                .rz-tick {
+                    position: absolute;
+                    top: 0px;
+                    left: 0;
+                    z-index:2;
+                    width: $slider-pointer-height;
+                    height: $slider-height;
+                    margin:0;
+                    padding:0;
+                    text-align: center;
+                    cursor: pointer;
+                    background:transparent;                    
+                    @include border-radius(0px);
 
-                    .amcust-advice {
-                        top: -7px;
-                        left: -75px;
-                        z-index:3;
-                        position: relative;
-                        width: 150px;
-                        height: 80px;
-                        display: block;
-
-                        &:before {
-                            content:"";
-                            display: block;
-                            width: 100%;
-                            height: $slider-bar-height;
-                            position: absolute;
-                            top: 15px;
-                            left: 0;
-                            z-index:3;
-                            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$color-primary+0,5fb624+50,7db9e8+100&0+0,0.6+50,0+100 */
-                            background: -moz-linear-gradient(left, rgba(95,182,36,0) 0%, rgba(95,182,36,0.6) 50%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
-                            background: -webkit-linear-gradient(left, rgba(95,182,36,0) 0%,rgba(95,182,36,0.6) 50%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
-                            background: linear-gradient(to right, rgba(95,182,36,0) 0%,rgba(95,182,36,0.6) 50%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-                            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005fb624', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
-
-                            @media (max-width:767px) {
-                                width: 60%;
-                                left:50%;
-                                margin-left:-30%;
-                            }
-                        }
-
-                        &:after {
-                            content:"";
-                            position:absolute;
-                            bottom:20px;
-                            left:50%;
-                            margin-left:-7px;
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            border-width: 0 7.5px 7.5px 7.5px;
-                            border-color: transparent transparent $color-primary transparent;
-                        }
-
-                        .lbl {
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            background: yellow;
-                            text-align: center;
-                            color:$color-primary;
-                            font-size: $base-font-size;
-                            line-height: $base-font-size;
-
-                            &.strong {
-                                font-weight:bold;
-                            }
-                        }
-
+                    &:before {
+                        content:"";
+                        display:block;
+                        width:1px;
+                        height:25px;
+                        margin:8px auto;
+                        background: $color-gray;
                     }
+
+                    &.hide-tick:before {
+                        background:transparent;
+                    }
+                    &:not(.show-value) .rz-tick-value {
+                        display:none;
+                    }
+                    &.show-value .rz-tick-value {
+                        color:$color-gray;
+                        top: auto;
+                        bottom: 0px;
+                        line-height: $base-font-size;
+                    }
+                    &.tick-advice {
+                        z-index:3;
+
+                        .amcust-advice {
+                            top: 0px;
+                            left: -55px;// ( (width / 2) - (tick width) )
+                            z-index:3;
+                            position: absolute;
+                            width: 150px;
+                            height: $slider-height;
+                            display: block;
+
+                            &:before {
+                                content:"";
+                                display: block;
+                                width: 100%;
+                                height: $slider-bar-height;
+                                position: absolute;
+                                top: 15px;
+                                left: 0;
+                                z-index:3;
+                                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$color-primary+0,5fb624+50,7db9e8+100&0+0,0.6+50,0+100 */
+                                background: -moz-linear-gradient(left, rgba(95,182,36,0) 0%, rgba(95,182,36,0.6) 50%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+                                background: -webkit-linear-gradient(left, rgba(95,182,36,0) 0%,rgba(95,182,36,0.6) 50%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+                                background: linear-gradient(to right, rgba(95,182,36,0) 0%,rgba(95,182,36,0.6) 50%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005fb624', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 */
+
+                                @media (max-width:767px) {
+                                    width: 60%;
+                                    left:50%;
+                                    margin-left:-30%;
+                                }
+                            }
+
+                            &:after {
+                                content:"";
+                                position:absolute;
+                                bottom:20px;
+                                left:50%;
+                                margin-left:-7px;
+                                width: 0;
+                                height: 0;
+                                border-style: solid;
+                                border-width: 0 7.5px 7.5px 7.5px;
+                                border-color: transparent transparent $color-primary transparent;
+                            }
+
+                            .lbl {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                text-align: center;
+                                color:$color-primary;
+                                font-size: $base-font-size;
+                                line-height: $base-font-size;
+
+                                // &.is-on {
+                                //     font-weight:bold;
+                                // }
+                            }
+
+                        }
+                    }
+                    /* (END) &.tick-advice */
+                    
                 }
-                /* (END) &.tick-advice */
-                
+                /* (END) .rz-tick */
             }
-            /* (END) .rz-tick */
+            
 
             .btn-slider {
                 position: absolute;
@@ -231,6 +245,8 @@ $common-font-size:$common-font-size;
                 line-height:$slider-btn-height;
                 color:$color-hyperlink;
                 border:1px solid $color-hyperlink !important;
+                text-align:center;
+                padding:0;
 
                 &:disabled,
                 &[disabled] {
@@ -238,14 +254,36 @@ $common-font-size:$common-font-size;
                     border-color:$color-gray-light !important;
                 }
 
-                font-size: 22px;
-                font-weight: bold;
-                line-height: 24px;
+                &:before {
+                    position:absolute;
+                    text-align:center;
+                    top:50%;
+                    left:50%;
+                    margin-left:-10px; 
+                    font-size: 22px;
+                    font-weight: bold;
+                    line-height:20px;
+                    display:inline-block;
+                    width:20px;
+                    height:20px;      
+                }                
+                
+                &.minus {                    
+                    &:before {
+                        margin-top:-12px;
+                        content:"-";
+                    }
+                }
 
                 &.plus {
                     left: auto;
                     right:0;
                     right:#{0 - ($slider-btn-height / 3)};
+
+                    &:before {
+                        margin-top:-11px;
+                        content:"+";
+                    }
                 }
             }
             /* (END) .btn-slider */

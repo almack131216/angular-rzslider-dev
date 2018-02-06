@@ -20,9 +20,10 @@
   <article>
     <h2>Debug slider</h2>
     <div class="debug-options">
+      <strong class="margin-right-1">settings:</strong>
       value: <input type="number" ng-model="amcustDebugSlider.value">
       advice: <input type="number" ng-model="amcustDebugSlider.options.showAdvice">
-      min: <input type="number" ng-model="amcustDebugSlider.options.floor">
+      min: <input type="number" ng-model="amcustDebugSlider.options.floor" min="1">
       max: <input type="number" ng-model="amcustDebugSlider.options.ceil">
       <button ng-click="parentBtnMinus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.floor">parent -</button>
       <button ng-click="parentBtnPlus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.ceil">parent +</button>

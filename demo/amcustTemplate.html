@@ -49,11 +49,11 @@
       <span ng-if="t.legend != null" class="rz-tick-legend">{{ t.legend }}</span>
       <span ng-if="t.value == slider.options.showAdvice" class="amcust-advice">
         <span class="gradient"></span>
-        <span class="lbl" ng-class="{'strong':slider.options.showAdvice == slider.lowValue}">Advies</span>
+        <span class="lbl" ng-class="{'is-on':slider.options.showAdvice == slider.lowValue}">Advies</span>
       </span>
     </li>
   </ul>
   <!-- // amcust [+/-] buttons -->
-  <button class="btn-slider minus" ng-click="slider.options.optionBtnMinus()" ng-disabled="slider.lowValue == slider.options.floor">-</button>
-  <button class="btn-slider plus" ng-click="slider.options.optionBtnPlus()" ng-disabled="slider.lowValue == slider.options.ceil">+</button>
+  <button class="btn-slider minus" ng-click="slider.options.optionBtnMinus()" ng-disabled="slider.lowValue == slider.options.floor"></button>
+  <button class="btn-slider plus" ng-click="slider.options.optionBtnPlus()" ng-disabled="slider.lowValue == slider.options.ceil"></button>
 </div>
