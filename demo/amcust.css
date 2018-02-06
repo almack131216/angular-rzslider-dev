@@ -78,7 +78,21 @@
     border-radius: 0px;
 }
 
+.btn-slider.minus,
+.btn-slider.plus {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index:2;
+    display:block;
+    width:30px;
+    height:30px;
+}
 
+.btn-slider.plus {
+    left: auto;
+    right:0;
+}
 
 .rzslider .rz-tick:not(.show-value) .rz-tick-value {
     display:none;

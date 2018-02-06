@@ -19,8 +19,8 @@
 
   <article>
     <h2>Debug slider: {{ amcustDebugSlider.value }} | Advice: {{ amcustDebugSlider.options.showAdvice }} | min: {{ amcustDebugSlider.options.floor }} | max: {{ amcustDebugSlider.options.ceil }} </h2>
-    <button ng-click="customBtnMinus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.floor">minus X</button>
-    <button ng-click="customBtnPlus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.ceil">add X</button>
+    <button ng-click="parentBtnMinus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.floor">parent -</button>
+    <button ng-click="parentBtnPlus()" ng-disabled="amcustDebugSlider.value == amcustDebugSlider.options.ceil">parent +</button>
     <div class="amcust-slider">
     <rzslider
       rz-slider-model="amcustDebugSlider.value"

@@ -91,7 +91,6 @@
         ariaLabelledBy: null,
         ariaLabelHigh: null,
         ariaLabelledByHigh: null,
-        customBtnPlus: null
       }
       var globalOptions = {}
 
