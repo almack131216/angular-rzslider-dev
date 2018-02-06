@@ -37,7 +37,8 @@
       ng-class="{
         'rz-selected': t.selected,
         'tick-advice':t.value == slider.options.showAdvice,
-        'show-value':t.value == slider.options.ceil || t.value == slider.options.floor
+        'show-value':t.value == slider.options.ceil || t.value == slider.options.floor,
+        'hide-tick':t.value == slider.options.ceil || t.value == slider.options.floor
         }"
       ng-style="t.style"
       ng-attr-uib-tooltip="{{ t.tooltip }}"

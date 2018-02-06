@@ -106,6 +106,9 @@
 .rzslider .rz-tick.tick-advice {
     z-index:3;
 }
+.rzslider .rz-tick.hide-tick {
+    background:transparent;
+}
 
 .rzslider .rz-tick .amcust-advice {
     top: -7px;
