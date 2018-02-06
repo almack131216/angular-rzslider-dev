@@ -21,14 +21,18 @@ $slider-bar-height:9px;
 
         .panels-count {
             width:100%;
+            font-weight:bold;
         }
 
         .panels-output {
+            white-space:nowrap;
         }
+
     }
 
     .slider-wrap {
         padding:10px;
+        overflow:hidden;
 
         .rzslider {
             position: relative;
