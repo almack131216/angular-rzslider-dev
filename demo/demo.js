@@ -14,23 +14,23 @@ app.controller('MainCtrl', function($scope, $rootScope, $timeout, $uibModal) {
       ceil: 12,
       step: 1,
       showSelectionBar: false,
-      showAdvice: 10,
-      customBtnPlus: function(value) {
-        console.log('!!! amcust: customBtnPlus(' + value + ')');
-        // $scope.$broadcast('rzSliderForceRender')
-        // positionTrackingHandle(value);
-      }
+      showAdvice: 10
     },
   }
 
-  $scope.customBtnPlus = function(getValue) {
-    console.log('!!! amcust: broadcast(' + getValue + ')');
-    setTimeout(function(){
-        console.log('!!! amcust: boradcast... amcustFunc(' + getValue + ')');
-        $scope.$broadcast('rzSliderForceRender');
-        $scope.$broadcast('amcustFunc', getValue);
-    }, 10);
-}
+  $scope.customBtnMinus = function() {
+    console.log('!!! amcust: customBtnMinus()(' + $scope.amcustDebugSlider.value + ')');
+    if($scope.amcustDebugSlider.value > $scope.amcustDebugSlider.options.floor) {
+      $scope.amcustDebugSlider.value--;
+    }
+  }
+
+  $scope.customBtnPlus = function() {
+    console.log('!!! amcust: customBtnPlus()(' + $scope.amcustDebugSlider.value + ')');
+    if($scope.amcustDebugSlider.value < $scope.amcustDebugSlider.options.ceil) {
+      $scope.amcustDebugSlider.value++;
+    }
+  }
 
   /* 
   vm.refreshSlider = function() {

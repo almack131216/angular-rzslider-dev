@@ -553,6 +553,7 @@
          * Read the user options and apply them to the slider model
          */
         applyOptions: function () {
+          console.log('!!! amcust: applyOptions()');
           var sliderOptions
           if (this.scope.rzSliderOptions)
             sliderOptions = this.scope.rzSliderOptions()
@@ -616,14 +617,14 @@
           //   this.scope.showAdvice = this.options.showAdvice + 1; //amcust
           // }
 
-          // console.log('=============================' + this.options);
-          // if (this.options.showBtnPlus) {
-          //   console.log('=============================' + this.options);
-          //   this.scope.showBtnPlus = function (value) {
-          //     console.log('!!! amcust: scope.showBtnPlus() | ' + value + ' / ' + $scope.amcustDebugSlider.value);
-          //     this.positionTrackingHandle(value);
-          //   }
-          // }
+          console.log('=============================' + this.options);
+          if (this.options.showBtnPlus) {
+            console.log('=============================' + this.options);
+            this.scope.showBtnPlus = function (value) {
+              console.log('!!! amcust: scope.showBtnPlus() | ' + value + ' / ' + $scope.amcustDebugSlider.value);
+              this.positionTrackingHandle(value);
+            }
+          }
 
         },
 

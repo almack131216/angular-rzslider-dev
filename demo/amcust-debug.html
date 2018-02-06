@@ -19,7 +19,8 @@
 
   <article>
     <h2>Debug slider: {{ amcustDebugSlider.value }} | Advice: {{ amcustDebugSlider.options.showAdvice }} </h2>
-    
+    <button ng-click="customBtnMinus()">minus X</button>
+    <button ng-click="customBtnPlus()">add X</button>
     <div class="amcust-slider">
     <rzslider
       rz-slider-model="amcustDebugSlider.value"
