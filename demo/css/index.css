@@ -9365,21 +9365,34 @@ body.scExperienceEditor header {
 .amcust-slider .heading-output .panels-count {
   width: 100%;
   font-weight: bold;
+  color: black;
 }
 
-/* line 29, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 30, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .heading-output .panels-output {
   white-space: nowrap;
 }
 
-/* line 35, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 33, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+.amcust-slider .heading-output .panels-output .LblOutput {
+  padding-right: 5px;
+}
+
+@media (max-width: 320px) {
+  /* line 33, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+  .amcust-slider .heading-output .panels-output .LblOutput {
+    display: none;
+  }
+}
+
+/* line 43, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap {
   padding: 10px;
   overflow: hidden;
   /* (END) .rzslider */
 }
 
-/* line 39, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 47, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider {
   position: relative;
   display: inline-block;
@@ -9396,7 +9409,7 @@ body.scExperienceEditor header {
   /* (END) .btn-slider */
 }
 
-/* line 51, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 59, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-bar-wrapper {
   top: 15.5px;
   left: 0;
@@ -9409,7 +9422,7 @@ body.scExperienceEditor header {
   /* (END) .rz-bar */
 }
 
-/* line 61, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 69, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-bar-wrapper .rz-bar {
   position: absolute;
   top: 0;
@@ -9421,7 +9434,7 @@ body.scExperienceEditor header {
   border-radius: 0px;
 }
 
-/* line 75, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 83, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-pointer {
   top: 0px;
   z-index: 3;
@@ -9458,12 +9471,12 @@ body.scExperienceEditor header {
   box-shadow: 0px 0px 0px 0px #2f7ccc;
 }
 
-/* line 93, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 101, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-pointer:after {
   display: none;
 }
 
-/* line 99, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 107, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-bubble.rz-limit.rz-ceil,
 .amcust-slider .slider-wrap .rzslider .rz-bubble.rz-limit.rz-floor,
 .amcust-slider .slider-wrap .rzslider .rz-bubble.rz-model-value,
@@ -9472,18 +9485,18 @@ body.scExperienceEditor header {
   display: none !important;
 }
 
-/* line 107, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 115, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rzslider .rz-pointer:after {
   display: none;
 }
 
-/* line 111, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 119, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks {
   top: 0;
   /* (END) .rz-tick */
 }
 
-/* line 114, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 122, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick {
   position: absolute;
   top: 0px;
@@ -9502,7 +9515,7 @@ body.scExperienceEditor header {
   /* (END) &.tick-advice */
 }
 
-/* line 128, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 136, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick:before {
   content: "";
   display: block;
@@ -9512,17 +9525,17 @@ body.scExperienceEditor header {
   background: #cacdd1;
 }
 
-/* line 137, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 145, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick.hide-tick:before {
   background: transparent;
 }
 
-/* line 140, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 148, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick:not(.show-value) .rz-tick-value {
   display: none;
 }
 
-/* line 143, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 151, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick.show-value .rz-tick-value {
   color: #cacdd1;
   top: auto;
@@ -9530,12 +9543,12 @@ body.scExperienceEditor header {
   line-height: 16px;
 }
 
-/* line 149, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 157, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick.tick-advice {
   z-index: 3;
 }
 
-/* line 152, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 160, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick.tick-advice .amcust-advice {
   top: 0px;
   left: -55px;
@@ -9548,7 +9561,7 @@ body.scExperienceEditor header {
   /* (END) green advice arrow */
 }
 
-/* line 161, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 169, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick.tick-advice .amcust-advice:before {
   content: "";
   display: block;
@@ -9570,7 +9583,7 @@ body.scExperienceEditor header {
 }
 
 @media (max-width: 768px) {
-  /* line 161, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+  /* line 169, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
   .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick.tick-advice .amcust-advice:before {
     width: 60%;
     left: 50%;
@@ -9578,7 +9591,7 @@ body.scExperienceEditor header {
   }
 }
 
-/* line 184, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 192, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick.tick-advice .amcust-advice:after {
   content: "";
   position: absolute;
@@ -9592,7 +9605,7 @@ body.scExperienceEditor header {
   border-color: transparent transparent #5fb624 transparent;
 }
 
-/* line 198, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 206, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .rz-ticks .rz-tick.tick-advice .amcust-advice .lbl {
   position: absolute;
   bottom: 0;
@@ -9604,7 +9617,7 @@ body.scExperienceEditor header {
   line-height: 16px;
 }
 
-/* line 222, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 230, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .btn-slider {
   position: absolute;
   top: 5px;
@@ -9622,13 +9635,13 @@ body.scExperienceEditor header {
   padding: 0;
 }
 
-/* line 241, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 249, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .btn-slider:disabled, .amcust-slider .slider-wrap .rzslider .btn-slider[disabled] {
   color: #f4f4f4 !important;
   border-color: #f4f4f4 !important;
 }
 
-/* line 247, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 255, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .btn-slider:before {
   position: absolute;
   text-align: center;
@@ -9643,20 +9656,20 @@ body.scExperienceEditor header {
   height: 20px;
 }
 
-/* line 262, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 270, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .btn-slider.minus:before {
   margin-top: -12px;
   content: "-";
 }
 
-/* line 268, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 276, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .btn-slider.plus {
   left: auto;
   right: 0;
   right: -10px;
 }
 
-/* line 273, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
+/* line 281, C:/xampp/htdocs/angular/angularjs-slider/demo/scss/style/addons/_rz-slider-amcust.scss */
 .amcust-slider .slider-wrap .rzslider .btn-slider.plus:before {
   margin-top: -11px;
   content: "+";

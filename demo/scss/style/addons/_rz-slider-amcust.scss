@@ -24,10 +24,18 @@ $common-font-size:20px;
         .panels-count {
             width:100%;
             font-weight:bold;
+            color:black;
         }
 
         .panels-output {
             white-space:nowrap;
+
+            .LblOutput {
+                padding-right:$offset-0-5;
+                @media (max-width:$bp-xxs){
+                    display:none;
+                }
+            }
         }
 
     }
